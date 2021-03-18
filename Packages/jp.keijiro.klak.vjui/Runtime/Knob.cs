@@ -37,6 +37,15 @@ namespace Klak.VJUI
             get { return _value; }
             set { Set(value); }
         }
+        
+        /// <summary>
+        /// Set the value of the slider without invoking onValueChanged callback.
+        /// </summary>
+        /// <param name="input">The new value for the slider.</param>
+        public void SetValueWithoutNotify(float input)
+        {
+            Set(input, false);
+        }
 
         public float normalizedValue
         {

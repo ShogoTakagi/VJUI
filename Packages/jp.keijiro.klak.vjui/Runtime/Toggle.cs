@@ -21,6 +21,15 @@ namespace Klak.VJUI
             get { return _isOn; }
             set { Set(value); }
         }
+        
+        /// <summary>
+        /// Set isOn without invoking onValueChanged callback.
+        /// </summary>
+        /// <param name="value">New Value for isOn.</param>
+        public void SetIsOnWithoutNotify(bool value)
+        {
+            Set(value, false);
+        }
 
         [SerializeField] Graphic _graphic;
 
